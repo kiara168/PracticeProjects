@@ -1,9 +1,10 @@
-import React from 'react';
-import { useState, useEffect } from 'react'
-import './App.css';
+import React from "react";
+import { useState, useEffect } from "react";
+import "./Player.css";
+import Player from "./components/Player";
 
-const App=()=> {
-  const [state, setState] = useState([
+function App() {
+  const [songs] = useState([
     {
         "title": "2 You",
         "artist": "Mariah the Scientist",
@@ -112,9 +113,28 @@ const App=()=> {
 
 ]);
 
+const [currentSongIndex, setCurrentSongIndex] = useState(0);
+  const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
+
+  useEffect(() => {
+    setNextSongIndex(() => {
+      if (currentSongIndex + 1 > songs.length - 1) {
+        return 0;
+      } else {
+        return currentSongIndex + 1;
+      }
+    });
+  }, [currentSongIndex]);
+
   return (
     <div className="App">
-      MusicPlayer
+      {/* <div className="weirdShape"></div> */}
+      <Player
+        currentSongIndex={currentSongIndex}
+        setCurrentSongIndex={setCurrentSongIndex}
+        nextSongIndex={nextSongIndex}
+        songs={songs}
+      />
     </div>
   );
 }
