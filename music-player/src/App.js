@@ -28,7 +28,7 @@ function App() {
     },
     {
         "title": "Closer (freat. H.E.R)",
-        "artist": "Saweetie, H.E.R.",
+        "artist": "Saweetie and H.E.R.",
         "album": "Closer",
         "img_src": "./songs-images/Closer-(feat.-HER).png",
         "src": "./songs/Closer__feat__H_E_R__.mp3"
@@ -42,7 +42,7 @@ function App() {
     },
     {
         "title": "Garden Party",
-        "artist": "Masego, Big Boi, JID",
+        "artist": "Masego and Big Boi and JID",
         "album": "Garden Party",
         "img_src": "./songs-images/Garden-Party.png",
         "src": "./songs/Garden_Party.mp3"
@@ -63,14 +63,14 @@ function App() {
     },
     {
         "title": "Iced Tea",
-        "artist": "Joyce Wrice, KATRANADA",
+        "artist": "Joyce Wrice and KATRANADA",
         "album": "Iced Tea",
         "img_src": "./songs-images/Iced-Tea.png",
         "src": "./songs/Iced_Tea.mp3"
     },
     {
         "title": "jealousy (feat. rema)",
-        "artist": "FKA twigs, Rema",
+        "artist": "FKA twigs and Rema",
         "album": "CAPRISONGS",
         "img_src": "./songs-images/jealousy-(feat.-rema).png",
         "src": "./songs/jealousy__feat__rema_.mp3"
@@ -91,7 +91,7 @@ function App() {
     },
     {
         "title": "NEON PEACH feat. Tyler, The Creator",
-        "artist": "Snoh Aalegra, Tyler, The Creator",
+        "artist": "Snoh Aalegra and Tyler, The Creator",
         "album": "TEMPORARY HIGHS IN VIOLET SKYS",
         "img_src": "./songs-images/Neon-Peach-Feat.-Tyler-the-Creator.png",
         "src": "./songs/NEON_PEACH_feat__Tyler__The_Creator.mp3"
@@ -105,12 +105,74 @@ function App() {
     },
     {
         "title": "Nobody But You",
-        "artist": "Sonder, Jorja Smith",
+        "artist": "Sonder and Jorja Smith",
         "album": "Nobody But You",
         "img_src": "./songs-images/Nobody-but-you.png",
         "src": "./songs/Nobody_But_You.mp3"
     },
-
+    {
+      "title": "Pasadena",
+      "artist": "Tinashe, Buddy",
+      "album": "Pasadena",
+      "img_src": ".songs-images/Pasadena.png",
+      "src": "./songs/Pasadena.mp3"
+    },
+    {
+      "title": "Persuasive",
+      "artist": "Doechii",
+      "album": "Persuasive",
+      "img_src": "./songs-images/Persuasive.png",
+      "src": "./songs/Persuasive.mp3"
+    },
+    {
+      "title": "pressure",
+      "artist": "Orion Sun",
+      "album": "Getaway",
+      "img_src": "./songs-images/pressure.png",
+      "src": "./songs/pressure.mp3"
+    },
+    {
+      "title": "Raindrops (feat. Flo Milli)",
+      "artist": "GoldLink and Flo Milli",
+      "album": "Raindrops",
+      "img_src": "./songs-images/Raindrops (feat.-Flo-Milli).png",
+      "src": "./songs/Raindrops__feat__Flo_Milli_.mp3"
+    },
+    {
+      "title": "Right Track (feat. Smino)",
+      "artist": "Syd and Smino",
+      "album": "Right Track",
+      "img_src": "./songs-images/Right-Track(feat.-Smino).png",
+      "src": "./songs/Right_Track__feat__Smino_.mp3"
+    },
+    {
+      "title": "SAD GIRLZ LUV MONEY Remix",
+      "artist": "Amaarae and Kali Uchis and Moliy",
+      "album": "SAD GIRLZ LUV MONEY Remix",
+      "img_src": "./songs-images/SAD-GIRLZ-LUV-MONEY-Remix.png",
+      "src": "./songs/SAD_GIRLZ_LUV_MONEY_Remix__feat__Kali_Uchis_and_Moliy_.mp3"
+    },
+    {
+      "title": "Slow Down",
+      "artist": "VanJess",
+      "album": "Slow Down",
+      "img_src": "./songs-images/Slow-Down.png",
+      "src": "./songs/Slow_Down.mp3"
+    },
+    {
+      "title": "sorry",
+      "artist": "UMI",
+      "album": "sorry",
+      "img_src": "./songs-images/sorry.png",
+      "src": "./songs/sorry.mp3"
+    },
+    {
+      "title": "Stuck",
+      "artist": "Samaria",
+      "album": "Stuck",
+      "img_src": "./songs-images/stuck.png",
+      "src": "./songs/Stuck.mp3"
+    },
 ]);
 
 const [currentSongIndex, setCurrentSongIndex] = useState(0);
