@@ -55,10 +55,9 @@ function Player(props) {
           />
           <p>
             <b>{props.songs[props.nextSongIndex].title} </b>&nbsp; by &nbsp;
-            <b>{props.songs[props.nextSongIndex].artist}</b>
-            {/* &nbsp; from album
-            &nbsp; */}
-            {/* <b>{props.songs[props.nextSongIndex].album}</b> */}
+            <b>{props.songs[props.nextSongIndex].artist}</b> 
+            {/* &nbsp; from album &nbsp;
+            <b>{props.songs[props.nextSongIndex].album}</b> */}
           </p>
         </div>
       </p>
@@ -75,35 +74,37 @@ function Player(props) {
           SkipSong={SkipSong}
         />
 
+
+        {/* need to figure out how to get these to work */}
         <div class="player__footer">
           <ul class="list list--footer">
             <li>
-              <a href="/" class="list__link">
-                <i class="fa fa-heart-o"></i>
+              <a href="#" class="list__link">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
               </a>
             </li>
 
             <li>
-              <a href="/" class="list__link">
-                <i class="fa fa-random"></i>
+              <a href="#" class="list__link">
+                <i class="fa fa-random" aria-hidden="true"></i>
               </a>
             </li>
 
             <li>
-              <a href="/" class="list__link">
-                <i class="fa fa-undo"></i>
+              <a href="#" class="list__link">
+                <i class="fa fa-undo" aria-hidden="true"></i>
               </a>
             </li>
 
             <li>
-              <a href="/" class="list__link">
-                <i class="fa fa-ellipsis-h"></i>
+              <a href="#" class="list__link">
+                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
               </a>
             </li>
           </ul>
         </div>
 
-        {/* <h4>Lofi Music Player React </h4> */}
+        <h4>Music Player React </h4>
       </div>
     </>
   );

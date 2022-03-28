@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import "./Player.css";
+import "./App.css";
 import Player from "./components/Player";
 
 function App() {
@@ -176,11 +176,11 @@ function App() {
 ]);
 
 const [currentSongIndex, setCurrentSongIndex] = useState(0);
-  const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
+const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
 
   useEffect(() => {
     setNextSongIndex(() => {
-      if (currentSongIndex + 1 > songs.length - 1) {
+      if (currentSongIndex > songs.length - 1) {
         return 0;
       } else {
         return currentSongIndex + 1;
@@ -190,7 +190,7 @@ const [currentSongIndex, setCurrentSongIndex] = useState(0);
 
   return (
     <div className="App">
-      {/* <div className="weirdShape"></div> */}
+      <div className="weirdShape"></div>
       <Player
         currentSongIndex={currentSongIndex}
         setCurrentSongIndex={setCurrentSongIndex}
