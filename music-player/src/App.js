@@ -187,6 +187,7 @@ const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
       }
     });
   }, [currentSongIndex]);
+  
 
   return (
     <div className="App">

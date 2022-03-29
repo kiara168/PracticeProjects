@@ -2,8 +2,11 @@ import React, { useState, useRef, useEffect } from "react";
 import PlayerDetails from "./PlayerDetails";
 import PlayerControls from "./PlayerControls";
 
+
 function Player(props) {
   const audioElement = useRef(null);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [seekValue, setSeekValue] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
@@ -40,6 +43,13 @@ function Player(props) {
     }
   };
 
+  const onPlaying = () => {
+    setCurrentTime(audioElement.current.currentTime);
+    setSeekValue(
+      (audioElement.current.currentTime / audioElement.current.duration) * 100
+    );
+  };
+
   return (
     <>
       <p>
@@ -61,11 +71,29 @@ function Player(props) {
           </p>
         </div>
       </p>
+      
       <div className="music-player">
         <audio
           src={props.songs[props.currentSongIndex].src}
           ref={audioElement}
+          onTimeUpdate={onPlaying}
         ></audio>
+
+        <p>{currentTime}</p>
+        <input
+        className="slider"
+          type="range"
+          min="0"
+          max="100"
+          step="1"
+          value={seekValue}
+          onChange={(e) => {
+            const seekto = audioElement.current.duration * (+e.target.value / 100);
+            audioElement.current.currentTime = seekto;
+            setSeekValue(e.target.value);
+          }}
+        />
+
         <PlayerDetails song={props.songs[props.currentSongIndex]} />
 
         <PlayerControls
