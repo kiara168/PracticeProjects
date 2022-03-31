@@ -114,7 +114,7 @@ function App() {
       "title": "Pasadena",
       "artist": "Tinashe, Buddy",
       "album": "Pasadena",
-      "img_src": ".songs-images/Pasadena.png",
+      "img_src": "./songs-images/Pasadena.png",
       "src": "./songs/Pasadena.mp3"
     },
     {
@@ -165,13 +165,6 @@ function App() {
       "album": "sorry",
       "img_src": "./songs-images/sorry.png",
       "src": "./songs/sorry.mp3"
-    },
-    {
-      "title": "Stuck",
-      "artist": "Samaria",
-      "album": "Stuck",
-      "img_src": "./songs-images/stuck.png",
-      "src": "./songs/Stuck.mp3"
     },
 ]);
 

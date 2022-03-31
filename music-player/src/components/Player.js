@@ -77,6 +77,7 @@ function Player(props) {
           src={props.songs[props.currentSongIndex].src}
           ref={audioElement}
           onTimeUpdate={onPlaying}
+          autoPlayAfterSrcChange={true}
         ></audio>
 
         <p>{currentTime}</p>
