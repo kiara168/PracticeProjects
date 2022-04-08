@@ -14,6 +14,7 @@ function Player(props) {
       audioElement.current.play();
     } else {
       audioElement.current.pause();
+      
     }
   });
 
@@ -77,7 +78,6 @@ function Player(props) {
           src={props.songs[props.currentSongIndex].src}
           ref={audioElement}
           onTimeUpdate={onPlaying}
-          autoPlayAfterSrcChange={true}
         ></audio>
 
         <p>{currentTime}</p>
@@ -108,27 +108,27 @@ function Player(props) {
         <div class="player__footer">
           <ul class="list list--footer">
             <li>
-              <a href="#" class="list__link">
+              <button  class="list__link" >
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
-              </a>
+              </button>
             </li>
 
             <li>
-              <a href="#" class="list__link">
+              <button  class="list__link">
                 <i class="fa fa-random" aria-hidden="true"></i>
-              </a>
+              </button>
             </li>
 
             <li>
-              <a href="#" class="list__link">
+              <button  class="list__link">
                 <i class="fa fa-undo" aria-hidden="true"></i>
-              </a>
+              </button>
             </li>
 
             <li>
-              <a href="#" class="list__link">
+              <button  class="list__link">
                 <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-              </a>
+              </button>
             </li>
           </ul>
         </div>

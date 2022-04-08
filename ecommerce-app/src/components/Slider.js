@@ -1,5 +1,7 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons"
+import { useState } from "react";
 import styled from "styled-components"
+import { sliderItems } from "../data"
 
 const Container = styled.div`
     width: 100%;
@@ -31,7 +33,8 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
-    transform: translateX(0vw)
+    transition: all 1s ease;
+    transform: translateX(${props=> props.slideIndex * -100}vw);
 `;
 
 const Slide = styled.div`
@@ -76,37 +79,36 @@ const Button = styled.button`
 
 const Slider = () => {
 
+    const [slideIndex, setSlideIndex] = useState(0);
+
     const handleClick = (direction) => {
 
+        if(direction === "left"){
+            setSlideIndex(slideIndex > 0 ? slideIndex -1 : 2 )
+        }
+        else{
+            setSlideIndex(slideIndex < 2 ? slideIndex + 1: 0 )
+        }
     };
   return (
     <Container>
         <Arrow direction="left" onClick={() => handleClick("left")}>
             <ArrowLeftOutlined />
         </Arrow>
-        <Wrapper>
-            <Slide bg="f5fafd">
+        <Wrapper slideIndex={slideIndex}>
+            {sliderItems.map(item => (
+                <Slide bg={item.bg}>
                 <ImgContainer>
-                    <Image src="https://img.ltwebstatic.com/images3_pi/2021/07/28/1627438439c7c72ca45293298e40ba52c7a88b15c8_thumbnail_900x.webp" />
+                    <Image src={item.img} />
                 </ImgContainer>
 
                 <InforContainer>
-                    <Title>SPRING SALE</Title>
-                    <Description>DON'T COMPRAMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS</Description>
+                    <Title>{item.title}</Title>
+                    <Description>{item.description}</Description>
                     <Button>Shop Now!</Button>
                 </InforContainer>
             </Slide>
-            <Slide bg="fcf1ed">
-                <ImgContainer>
-                    <Image src="https://img.ltwebstatic.com/images3_pi/2022/01/12/164197786912118e1441c3211205f07dd16cd0848b_thumbnail_900x.webp" />
-                </ImgContainer>
-
-                <InforContainer>
-                    <Title>STYLE CORNNER</Title>
-                    <Description>CHECK OUT OUR Y2K STYLES</Description>
-                    <Button>Shop Now!</Button>
-                </InforContainer>
-            </Slide>
+            ))}
         </Wrapper>
         <Arrow direction="right" onClick={() => handleClick("right")}>
             <ArrowRightOutlined />

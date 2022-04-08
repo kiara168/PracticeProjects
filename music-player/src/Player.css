@@ -164,6 +164,7 @@ body {
 
 .list__link {
   transition: all 0.25s cubic-bezier(0.4, 0, 1, 1);
+  color: transparent;
 }
 .list__link:focus,
 .list__link:hover {
